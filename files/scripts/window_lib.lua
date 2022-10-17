@@ -994,7 +994,7 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local target_pos = window_table[dimension][wid].extra.target_pos
 	local target_entity = window_table[dimension][wid].extra.target_entity
 	local movers = {{ "left", -1, 0, }, { "up", 0, -1, }, { "down", 0, 1, }, { "right", 1, 0, }}
-	for i = 1,5 do
+	for i = 1,4 do
 		uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_direction_"..movers[i][1]..".png" )
 		uid = new_tooltip( gui, uid, ui_z - 200, string.upper( movers[i][1] ), "LMB to move one step. @ RMB to x5.", true )
 		if( clicked ) then
