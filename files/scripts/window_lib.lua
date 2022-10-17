@@ -16,11 +16,11 @@ function create_main_window( loc, pic_z )
 			contents = main_window,
 		},
 	}
-	
+
 	local id = new_number()
 	main_window_opened[dimension] = id
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -43,12 +43,12 @@ function create_camera_window( loc, pic_z )
 			mouse_buffer = nil,
 		},
 	}
-	
+
 	local id = new_number()
 	camera_window_opened[1] = dimension
 	camera_window_opened[2] = id
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -69,10 +69,10 @@ function create_settings_window( loc, pic_z )
 			is_all = false,
 		},
 	}
-	
+
 	local id = new_number()
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -91,11 +91,11 @@ function create_flag_window( loc, pic_z )
 			page = 1,
 		},
 	}
-	
+
 	local id = new_number()
 	flag_window_opened[dimension] = id
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -117,11 +117,11 @@ function create_manager_window( loc, pic_z )
 			search = "",
 		},
 	}
-	
+
 	local id = new_number()
 	manager_opened[dimension] = id
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -141,11 +141,11 @@ function create_keyboard( loc, pic_z )
 			shift_down = false,
 		},
 	}
-	
+
 	local id = new_number()
 	keyboard_opened[dimension] = id
 	add_window( wnd, id, nil, true )
-	
+
 	return id
 end
 
@@ -165,11 +165,11 @@ function create_keyboard_extra( loc, pic_z )
 			layer = 1,
 		},
 	}
-	
+
 	local id = new_number()
 	keyboard_extra_opened[dimension] = id
 	add_window( wnd, id, nil, true )
-	
+
 	return id
 end
 
@@ -188,11 +188,11 @@ function create_clipboard( loc, pic_z )
 			page = 1,
 		},
 	}
-	
+
 	local id = new_number()
 	clipboard_opened[dimension] = id
 	add_window( wnd, id, nil, true )
-	
+
 	return id
 end
 
@@ -211,11 +211,11 @@ function create_frame_window( loc, pic_z )
 			contents = frame_window,
 		},
 	}
-	
+
 	local id = new_number()
 	frame_window_opened[dimension] = id
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -234,11 +234,11 @@ function create_teleboard_window( loc, pic_z )
 			page = 1,
 		},
 	}
-	
+
 	local id = new_number()
 	teleboard_window_opened[dimension] = id
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -268,11 +268,11 @@ function create_zoom_window( loc, pic_z )
 			end,
 		},
 	}
-	
+
 	local id = new_number()
 	zoom_window_opened[dimension] = id
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -293,11 +293,11 @@ function create_transform_window( loc, pic_z )
 			contents = transform_window,
 		},
 	}
-	
+
 	local id = new_number()
 	transform_window_opened[dimension] = id
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -316,11 +316,11 @@ function create_ecs_window( loc, pic_z )
 			contents = ecs_window,
 		},
 	}
-	
+
 	local id = new_number()
 	ecs_window_opened[dimension] = id
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -344,11 +344,11 @@ function create_animaler_window( loc, pic_z )
 			boxes = { true, { 0, 1, }, }
 		},
 	}
-	
+
 	local id = new_number()
 	animaler_window_opened[dimension] = id
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -367,10 +367,10 @@ function create_scene_window( loc, pic_z )
 			info = { "", "", "", "", 0, true, true, },
 		},
 	}
-	
+
 	local id = new_number()
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -381,7 +381,7 @@ function create_entity_window( loc, pic_z, entity_id )
 		new_log( "[ERROR] Entity isn't real!", true )
 		return
 	end
-	
+
 	local wnd = {
 		title = get_name( entity_id ),
 		style = "big_A",
@@ -404,10 +404,10 @@ function create_entity_window( loc, pic_z, entity_id )
 			end,
 		},
 	}
-	
+
 	local id = new_number()
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -427,10 +427,10 @@ function create_child_window( loc, pic_z, entity_id )
 			entity = entity_id,
 		},
 	}
-	
+
 	local id = new_number()
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -450,10 +450,10 @@ function create_tag_window( loc, pic_z, entity_id )
 			entity = entity_id,
 		},
 	}
-	
+
 	local id = new_number()
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -478,10 +478,10 @@ function create_comp_window( loc, pic_z, entity_id, comp_id, object_name )
 			end,
 		},
 	}
-	
+
 	local id = new_number()
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -504,10 +504,10 @@ function create_table_window( loc, pic_z, entity_id, comp_id, object_id, field_n
 			field = field_name,
 		},
 	}
-	
+
 	local id = new_number()
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -531,10 +531,10 @@ function create_edit_window( loc, pic_z, ttl, stl, custom_contents, extra_stuff,
 			drift_action = drft_action,
 		},
 	}
-	
+
 	local id = new_number()
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -556,10 +556,10 @@ function create_misc_window( loc, pic_z )
 			file_info = { "file_path", false, },
 		},
 	}
-	
+
 	local id = new_number()
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -579,11 +579,11 @@ function create_ext_window( loc, pic_z )
 			ext_value = {},
 		},
 	}
-	
+
 	local id = new_number()
 	ext_window_opened[dimension] = id
 	add_window( wnd, id )
-	
+
 	return id
 end
 
@@ -602,11 +602,11 @@ function create_help_window( loc, pic_z )
 			contents = help_window,
 		},
 	}
-	
+
 	local id = new_number()
 	help_opened[dimension] = id
 	add_window( wnd, id, nil, true )
-	
+
 	return id
 end
 
@@ -614,7 +614,7 @@ end
 function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked, value = 0, 0, 0, 0
 	local w, h = GuiGetScreenDimensions( gui )
-	
+
 	pic_x = pic_x + 2
 	for i = 1,3 do
 		pic_y = pic_y + 11
@@ -629,7 +629,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			script_online[i] = not( script_online[i])
 		end
 	end
-	
+
 	pic_x = pic_x + 13
 	uid, clicked, r_clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, transform_editor, 21, "TSF" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Tranformer", "LMB to "..( transform_editor and "hide" or "show" ).." the gizmo. @ RMB to open Transform Window.", true )
@@ -648,7 +648,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			create_transform_window({w - 84, h - 124}, ui_z )
 		end
 	end
-	
+
 	pic_y = pic_y - 11
 	value = ( animaler_window_opened[dimension] ~= 0 )
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, value, 21, "ANM" )
@@ -663,7 +663,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			create_animaler_window({w - 479, h - 45}, ui_z )
 		end
 	end
-	
+
 	pic_y = pic_y - 11
 	value = ( ecs_window_opened[dimension] ~= 0 )
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, value, 21, "ECP" )
@@ -675,7 +675,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			create_ecs_window({w - 84, h - 181}, ui_z )
 		end
 	end
-	
+
 	pic_x = pic_x + 22
 	value = ( camera_window_opened[2] ~= 0 )
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, value, 21, "CMR" )
@@ -692,7 +692,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			create_camera_window({1, h - 34}, ui_z )
 		end
 	end
-	
+
 	pic_y = pic_y + 11
 	if( IS_1K_MODE or ModSettingGetNextValue( "p2k.NO_SHADER_STUFF" )) then
 		uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, false, 21, "ERR" )
@@ -709,7 +709,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	pic_y = pic_y + 11
 	value = ( teleboard_window_opened[dimension] ~= 0 )
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, value, 21, "TLP" )
@@ -724,7 +724,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			create_teleboard_window({new_spawn()}, ui_z )
 		end
 	end
-	
+
 	pic_x = pic_x + 24
 	value = ModSettingGetNextValue( "p2k.SHOW_ENTITIES" )
 	local val = ModSettingGetNextValue( "p2k.SHOW_NUMBERS" )
@@ -740,7 +740,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		new_log( "Entity Radar Numbers: ["..( val and "DIS" or "EN" ).."ABLED]" )
 		ModSettingSetNextValue( "p2k.SHOW_NUMBERS", not( val ), false )
 	end
-	
+
 	pic_y = pic_y - 11
 	value = ( frame_window_opened[dimension] ~= 0 )
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, value, 21, "FRM" )
@@ -752,7 +752,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			create_frame_window({w - 155, h - 91}, ui_z )
 		end
 	end
-	
+
 	pic_y = pic_y - 11
 	value = ModSettingGetNextValue( "p2k.END_DISPLAY" )
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, value, 21, "TDM" )
@@ -762,7 +762,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		new_log( "Text is displayed from the "..( value and "[START]" or "[END]" ))
 		ModSettingSetNextValue( "p2k.END_DISPLAY", not( value ), false )
 	end
-	
+
 	pic_x = pic_x + 24
 	value = ( flag_window_opened[dimension] ~= 0 )
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, value, 21, "FLG" )
@@ -774,21 +774,21 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			create_flag_window({new_spawn()}, ui_z )
 		end
 	end
-	
+
 	pic_y = pic_y + 11
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, false, 21, "PXS" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Pixel Scene Spawner", nil, true )
 	if( clicked ) then
 		create_scene_window({new_spawn()}, ui_z )
 	end
-	
+
 	pic_y = pic_y + 11
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, false, 21, "MSC" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Misc Utilities", nil, true )
 	if( clicked ) then
 		create_misc_window({new_spawn()}, ui_z )
 	end
-	
+
 	pic_x = pic_x + 22
 	value = ( ext_window_opened[dimension] ~= 0 )
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, value, 21, "EXT" )
@@ -800,7 +800,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			create_ext_window({new_spawn()}, ui_z )
 		end
 	end
-	
+
 	pic_y = pic_y - 11
 	value = ( keyboard_opened[dimension] ~= 0 )
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, value, 21, "KBD" )
@@ -812,14 +812,14 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			create_keyboard({w - 352, h - 56}, ui_z )
 		end
 	end
-	
+
 	pic_y = pic_y - 11
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, false, 21, "STS" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Settings", nil, true )
 	if( clicked ) then
 		create_settings_window({new_spawn()}, ui_z )
 	end
-	
+
 	pic_x = pic_x + 24
 	local info = D_extractor( ModSettingGetNextValue( "p2k.EXTENSION_INFO" )) or {}
 	for i = 1,3 do
@@ -856,7 +856,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		if( r_clicked ) then
 			local custom_contents = function( gui, uid, pic_x, pic_y, pic_z, wid )
 				local page = window_table[dimension][wid].extra.value.page
-				
+
 				local clicked = false
 				local counter = 1
 				local poses = {{ 2, 11 }, { 52, 11 }, { 2, 22 }, { 52, 22 },}
@@ -865,7 +865,7 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 						if( e > #extensions ) then
 							break
 						end
-						
+
 						local is_current = extensions[e].id == info[i]
 						new_text( gui, pic_x + poses[counter][1] + 2, pic_y + poses[counter][2], pic_z - 0.01, liner( gui, extensions[e].id, 44 ), is_current and 3 or 1 )
 						uid, clicked = new_button( gui, uid, pic_x + poses[counter][1], pic_y + poses[counter][2], pic_z, "mods/p2k/files/pics/button_48_"..( is_current and "B" or "A" )..".png" )
@@ -876,21 +876,21 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 							ModSettingSetNextValue( "p2k.EXTENSION_INFO", D_packer( info ), false )
 							table.insert( to_delete, { wid, false, nil, false })
 						end
-						
+
 						counter = counter + 1
 					end
 				end
-				
+
 				pic_x = pic_x + 101
 				pic_y = pic_y + 11
 				uid = new_image( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/dot_purple_dark.png", 1, 21 )
-				
+
 				pic_x = pic_x + 2
 				uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #extensions/4 ))
 				if( page ~= window_table[dimension][wid].extra.value.page ) then
 					window_table[dimension][wid].extra.value.page = page
 				end
-				
+
 				return uid
 			end
 			local cid = create_edit_window({new_spawn( wid )}, ui_z, "EXTENSION_LIST", "animaler_empty", custom_contents, { page = 1 } )
@@ -899,13 +899,13 @@ function main_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		end
 		pic_y = pic_y + 11
 	end
-	
+
 	return uid
 end
 
 function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked, value = 0, 0, 0, 0
-	
+
 	pic_x = pic_x + 2
 	pic_y = pic_y + 11
 	if( IS_1K_MODE ) then
@@ -925,7 +925,7 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			new_log( "[RESOLUTION RESET]", true )
 			ModSettingSetNextValue( "p2k.CUSTOM_RES", D_packer({ MagicNumbersGetValue( "VIRTUAL_RESOLUTION_X" ), MagicNumbersGetValue( "VIRTUAL_RESOLUTION_Y" )}), false )
 		end
-		
+
 		pic_x = pic_x + 11
 		local custom_res = D_extractor( ModSettingGetNextValue( "p2k.CUSTOM_RES" ), true )
 		local letters = { "W:", "H:", }
@@ -938,29 +938,30 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					ModSettingSetNextValue( "p2k.CUSTOM_RES", D_packer( custom_res ), false )
 				end)
 			end
-			
+
 			pic_x = pic_x + 32
 		end
 	end
-	
+
 	uid = new_image( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/dot_purple_dark.png", 1, 10 )
-	
+
 	pic_x = pic_x + 2
 	local mode = ModSettingGetNextValue( "p2k.CAMERA_MODE" )
 	local modes = {
 		{ "Vanilla", nil, },
-		{ "Follow Entity", "Set up the target from the captured one first with the button on the right.", },
+		{ "Follow Target Entity", "Target the captured entity with the button on the right.", },
+		{ "Follow Captured Entity", "Automatically follow the currently captured entity.", },
 		{ "Free", "Use WASD to move and SHIFT to accelerate. @ Hold RMB for faster movement.", },
 		{ "Locked", "Set up the position with the button on the right. @ RMB to drag the screen. @ Directional buttons on the right can be used for precise positioning." },
 	}
-	uid, clicked, value = new_switcher( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/button_10_A.png", mode, { "V", "E", "F", "L" })
+	uid, clicked, value = new_switcher( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/button_10_A.png", mode, { "V", "T", "C", "F", "L" })
 	uid = new_tooltip( gui, uid, ui_z - 200, modes[mode][1], modes[mode][2], true )
 	if( clicked ) then
 		free_cam( false )
 		mode = value
 		ModSettingSetNextValue( "p2k.CAMERA_MODE", value, false )
 	end
-	
+
 	pic_x = pic_x + 11
 	value = window_table[dimension][wid].extra.is_hard
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, value, 10, {"S", "H"})
@@ -972,7 +973,7 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			new_log( "[WARNING] Will take effect only in \"Vanilla\" mode." )
 		end
 	end
-	
+
 	pic_x = pic_x + 11
 	uid, clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "", "LMB to set the "..( captured_entity == 0 and "position" or "target" )..".", true )
@@ -985,10 +986,10 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		end
 		new_log( "["..( captured_entity == 0 and "POSITION" or "TARGET" ).." SET]", true )
 	end
-	
+
 	pic_x = pic_x + 11
 	uid = new_image( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/dot_purple_dark.png", 1, 10 )
-	
+
 	pic_x = pic_x + 2
 	local target_pos = window_table[dimension][wid].extra.target_pos
 	local target_entity = window_table[dimension][wid].extra.target_entity
@@ -998,18 +999,18 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		uid = new_tooltip( gui, uid, ui_z - 200, string.upper( movers[i][1] ), "LMB to move one step. @ RMB to x5.", true )
 		if( clicked ) then
 			play_sound( "button_generic" )
-			if( mode == 4 ) then
+			if( mode == 5 ) then
 				window_table[dimension][wid].extra.target_pos[1] = target_pos[1] + movers[i][2]
 				window_table[dimension][wid].extra.target_pos[2] = target_pos[2] + movers[i][3]
 			else
 				free_cam( false )
-				ModSettingSetNextValue( "p2k.CAMERA_MODE", 4, false )
-				mode = 4
+				ModSettingSetNextValue( "p2k.CAMERA_MODE", 5, false )
+				mode = 5
 				window_table[dimension][wid].extra.target_pos = { cam_x, cam_y, }
 			end
 		end
 		if( r_clicked ) then
-			if( mode == 4 ) then
+			if( mode == 5 ) then
 				play_sound( "button_special" )
 				window_table[dimension][wid].extra.target_pos[1] = target_pos[1] + movers[i][2]*5
 				window_table[dimension][wid].extra.target_pos[2] = target_pos[2] + movers[i][3]*5
@@ -1020,13 +1021,13 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		end
 		pic_x = pic_x + 11
 	end
-	
+
 	local offsets = { 0, 0 }
 	local rmb_down = false
 	if( ctrl_body ~= nil ) then
 		local ctrl_comp = EntityGetFirstComponentIncludingDisabled( ctrl_body, "ControlsComponent" )
 		rmb_down = ComponentGetValue2( ctrl_comp, "mButtonDownRightClick" )
-		
+
 		-- local w_down = ComponentGetValue2( ctrl_comp, "mButtonDownUp" )
 		-- local a_down = ComponentGetValue2( ctrl_comp, "mButtonDownLeft" )
 		-- local s_down = ComponentGetValue2( ctrl_comp, "mButtonDownDown" )
@@ -1038,13 +1039,15 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			-- offsets[1] = a_down and 2 or -2
 		-- end
 	end
-	
+
 	if( mode == 1 ) then
 		if( value ) then
 			if( hooman ~= 0 ) then
 				local shooter_comp = EntityGetFirstComponentIncludingDisabled( hooman, "PlatformShooterPlayerComponent" )
 				local char_x, char_y = EntityGetTransform( hooman )
-				ComponentSetValue2( shooter_comp, "mDesiredCameraPos", char_x, char_y )
+				if( shooter_comp ~= nil ) then
+				    ComponentSetValue2( shooter_comp, "mDesiredCameraPos", char_x, char_y )
+                end
 			end
 		end
 	elseif( mode == 2 ) then
@@ -1063,14 +1066,30 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		else
 			free_cam( false )
 		end
-	elseif( mode == 3 ) then
+	elseif( mode == 3 ) then    -- Copi: This is blatantly copied from mode 2, only difference is captured vs target. 
+		if( captured_entity ~= nil and EntityGetIsAlive( captured_entity )) then
+			local t_x, t_y = EntityGetTransform( captured_entity )
+			if( hooman ~= 0 ) then
+				local shooter_comp = EntityGetFirstComponentIncludingDisabled( hooman, "PlatformShooterPlayerComponent" )
+				if( shooter_comp ~= nil ) then
+					ComponentSetValue2( shooter_comp, "mSmoothedCameraPosition", t_x, t_y )
+					ComponentSetValue2( shooter_comp, "mDesiredCameraPos", t_x, t_y )
+				end
+			else
+				free_cam( true )
+				GameSetCameraPos( t_x + offsets[1], t_y + offsets[2] )
+			end
+		else
+			free_cam( false )
+		end
+	elseif( mode == 4 ) then
 		free_cam( true )
-		
+
 		if( rmb_down ) then
 			local m_x, m_y = DEBUG_GetMouseWorld()
 			GameSetCameraPos( m_x + offsets[1], m_y + offsets[2] )
 		end
-	elseif( mode == 4 ) then
+	elseif( mode == 5 ) then
 		if( target_pos ~= nil ) then
 			if( hooman ~= 0 ) then
 				local shooter_comp = EntityGetFirstComponentIncludingDisabled( hooman, "PlatformShooterPlayerComponent" )
@@ -1082,7 +1101,7 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				free_cam( true )
 				GameSetCameraPos( target_pos[1] + offsets[1], target_pos[2] + offsets[2] )
 			end
-			
+
 			local m_x, m_y, shit_from_ass = get_mouse_pos( gui )
 			local mouse_buffer = window_table[dimension][wid].extra.mouse_buffer
 			if( rmb_down ) then
@@ -1099,17 +1118,17 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			window_table[dimension][wid].extra.target_pos = { cam_x, cam_y, }
 		end
 	end
-	
+
 	return uid
 end
 
 function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local t_x, t_y = pic_x, pic_y
-	
+
 	local page = window_table[dimension][wid].extra.page
 	local is_all = window_table[dimension][wid].extra.is_all
-	
+
 	local values = {}
 	local count = 0
 	if( is_all ) then
@@ -1119,12 +1138,12 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			if( i > ( count - 1 )) then
 				break
 			end
-			
+
 			t_y = t_y + 11
 			local name, value = ModSettingGetAtIndex( i )
 			new_text( gui, t_x, t_y, pic_z, liner( gui, name, 69 ), 2 )
 			uid = new_tooltip( gui, uid, ui_z - 200, name )
-			
+
 			local mode = 1
 			if( type( value ) == "boolean" ) then
 				mode = 3
@@ -1156,12 +1175,12 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				if( i > #values ) then
 					break
 				end
-				
+
 				t_y = t_y + 11
 				local value = values[i][1]
 				new_text( gui, t_x, t_y, pic_z, liner( gui, value, 69 ), 2 )
 				uid = new_tooltip( gui, uid, ui_z - 200, value )
-				
+
 				local mode = values[i][2]
 				local setting = ModSettingGetNextValue( value )
 				if( mode == 3 ) then
@@ -1181,7 +1200,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	pic_x = pic_x + 136
 	pic_y = pic_y + 11
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, is_all, 21, "ALL" )
@@ -1190,7 +1209,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		play_sound( "button_generic" )
 		window_table[dimension][wid].extra.is_all = not( is_all )
 	end
-	
+
 	if( not( is_all )) then
 		pic_y = pic_y + 11
 		pic = "mods/p2k/files/pics/button_21_A.png"
@@ -1200,7 +1219,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		if( clicked ) then
 			local custom_contents = function( gui, uid, pic_x, pic_y, pic_z, wid )
 				pic_y = pic_y + 11
-				
+
 				local values = window_table[dimension][wid].extra.value
 				pic_x = pic_x + 2
 				uid, r_clicked = new_input( gui, uid, pic_x, pic_y, pic_z, 48, wid.."mod_id", values[2] )
@@ -1216,7 +1235,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 						window_table[dimension][wid].extra.value[3] = k_buffer
 					end)
 				end
-				
+
 				pic_x = pic_x + 85
 				local value = 0
 				local types = { "String", "Number", "Boolean", }
@@ -1225,7 +1244,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				if( clicked ) then
 					window_table[dimension][wid].extra.value[4] = value
 				end
-				
+
 				pic_x = pic_x + 11
 				uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 				uid = new_tooltip( gui, uid, ui_z - 200, "MOD_ID | SETTING_ID | TYPE", "LMB to confirm. @ RMB to save to the memory list.", true )
@@ -1237,12 +1256,12 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					play_sound( "button_special" )
 					ModSettingSetNextValue( "p2k.SETTINGS_INFO", ModSettingGetNextValue( "p2k.SETTINGS_INFO" )..values[2].."."..values[3]..":"..values[4].."|", false )
 				end
-				
+
 				return uid
 			end
 			born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "ADD_SETTING", nil, custom_contents, { wid, "mod_id", "setting_id", 1 }))
 		end
-		
+
 		pic_y = pic_y + 11
 		new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "SCN" )
 		uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -1251,7 +1270,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			local custom_contents = function( gui, uid, pic_x, pic_y, pic_z, wid )
 				pic_x = pic_x + 2
 				pic_y = pic_y + 11
-				
+
 				local values = window_table[dimension][wid].extra.value
 				uid, r_clicked = new_input( gui, uid, pic_x, pic_y, pic_z, 34, wid.."mod_id", values[2] )
 				if( r_clicked ) then
@@ -1259,7 +1278,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 						window_table[dimension][wid].extra.value[2] = k_buffer
 					end)
 				end
-				
+
 				pic_x = pic_x + 35
 				uid, r_clicked = new_input( gui, uid, pic_x, pic_y, pic_z, 109, wid.."path", values[3] )
 				if( r_clicked ) then
@@ -1267,7 +1286,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 						window_table[dimension][wid].extra.value[3] = k_buffer
 					end)
 				end
-				
+
 				pic_x = pic_x + 110
 				uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 				uid = new_tooltip( gui, uid, ui_z - 200, "MOD_ID | PATH @ PATH will be autoassembled from MOD_ID if left empty. @", nil, true )
@@ -1275,7 +1294,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					play_sound( "confirm" )
 					mod_settings = nil
 					dofile( values[3] == "" and ( "mods/"..values[2].."/settings.lua" ) or values[3] )
-					
+
 					function appender( vls, sts )
 						for i,setting in ipairs( sts ) do
 							if( setting.category_id ~= nil ) then
@@ -1290,7 +1309,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 								else
 									set_val = 1
 								end
-								
+
 								table.insert( window_table[dimension][vls[1]].extra.values, { full_id, set_val })
 							end
 						end
@@ -1299,12 +1318,12 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 						appender( values, mod_settings )
 					end
 				end
-				
+
 				return uid
 			end
 			born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "FILE_SCAN", nil, custom_contents, { wid, "p2k", "" } ))
 		end
-		
+
 		pic_y = pic_y + 11
 		new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "MEM" )
 		uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -1313,7 +1332,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			local custom_contents = function( gui, uid, pic_x, pic_y, pic_z, wid )
 				local pic, clicked, r_clicked = 0, 0, 0
 				local t_x, t_y = pic_x, pic_y
-				
+
 				local page = window_table[dimension][wid].extra.value[1]
 				local tbl = DD_extractor( ModSettingGetNextValue( "p2k.SETTINGS_INFO" )) or {}
 				if( #tbl > 0 ) then
@@ -1322,7 +1341,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 						if( i > #tbl ) then
 							break
 						end
-						
+
 						t_y = t_y + 11
 						new_text( gui, t_x, t_y, pic_z, liner( gui, tbl[i][1], 109 ), 2 )
 						uid = new_tooltip( gui, uid, ui_z - 200, tbl[i][1] )
@@ -1341,7 +1360,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 						end
 					end
 				end
-				
+
 				pic_x = pic_x + 136
 				pic_y = pic_y + 11
 				new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "CLR" )
@@ -1351,18 +1370,18 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					play_sound( "delete" )
 					ModSettingSetNextValue( "p2k.SETTINGS_INFO", "|", false )
 				end
-				
+
 				pic_y = pic_y + 77
 				uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #tbl/9 ))
 				if( page ~= window_table[dimension][wid].extra.value[1] ) then
 					window_table[dimension][wid].extra.value[1] = page
 				end
-				
+
 				return uid
 			end
 			create_edit_window({new_spawn()}, ui_z, "SAVED_SETTINGS", "big_B", custom_contents, { 1, wid })
 		end
-		
+
 		pic_y = pic_y + 11
 		new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "CLR" )
 		uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -1372,7 +1391,7 @@ function settings_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			window_table[dimension][wid].extra.values = {}
 		end
 	end
-	
+
 	pic_y = pic_y + ( is_all and 77 or 33 )
 	uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil(( is_all and count or #values )/9 ))
 	if( page ~= window_table[dimension][wid].extra.page ) then
@@ -1386,17 +1405,17 @@ function flag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local t_x, t_y = pic_x, pic_y
 	local page = window_table[dimension][wid].extra.page
-	
+
 	local wse_id = GameGetWorldStateEntity()
 	local ws_comp = EntityGetFirstComponentIncludingDisabled( wse_id, "WorldStateComponent" )
 	if( ws_comp == nil ) then
 		pic_x = pic_x + 2
 		pic_y = pic_y + 11
 		new_text( gui, pic_x, pic_y, pic_z, "[CRITICAL ERROR]", 2 )
-		
+
 		return uid
 	end
-	
+
 	local run_flags = ComponentGetValue2( ws_comp, "flags" ) or {}
 	if( #run_flags > 0 ) then
 		t_x = t_x + 2
@@ -1404,7 +1423,7 @@ function flag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			if( i > #run_flags ) then
 				break
 			end
-			
+
 			t_y = t_y + 11
 			new_text( gui, t_x, t_y, pic_z, liner( gui, run_flags[i], 120 ), 2 )
 			uid = new_tooltip( gui, uid, ui_z - 200, run_flags[i] )
@@ -1416,7 +1435,7 @@ function flag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	pic_x = pic_x + 136
 	pic_y = pic_y + 11
 	pic = "mods/p2k/files/pics/button_21_A.png"
@@ -1434,7 +1453,7 @@ function flag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					new_log( "[FLAG ADDED]", true )
 				end)
 			end
-			
+
 			pic_x = pic_x + 134
 			uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_check.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "State Check", nil, true )
@@ -1443,7 +1462,7 @@ function flag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				local flag_name = keyboard_info[dimension][2]..keyboard_info[dimension][3]
 				new_log( flag_name..": ["..string.upper( tostring( HasFlagPersistent( flag_name ))).."]", true )
 			end
-			
+
 			pic_x = pic_x + 11
 			uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_delete.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "Remove", "RMB to delete.", true )
@@ -1458,12 +1477,12 @@ function flag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					new_log( "[ERROR] Fag isn't real!", true )
 				end
 			end
-			
+
 			return uid
 		end
 		born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "ADD_FLAG_PERSISTENT", nil, custom_contents ))
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "ADD" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -1478,31 +1497,31 @@ function flag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					GameAddFlagRun( k_buffer )
 				end)
 			end
-			
+
 			return uid
 		end
 		born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "ADD_FLAG_RUN", nil, custom_contents ))
 	end
-	
+
 	pic_y = pic_y + 66
 	uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #run_flags/9 ))
 	if( page ~= window_table[dimension][wid].extra.page ) then
 		window_table[dimension][wid].extra.page = page
 	end
-	
+
 	return uid
 end
 
 function manager_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local t_x, t_y = pic_x, pic_y
-	
+
 	local page = window_table[dimension][wid].extra.page
 	local searcher = string.lower( window_table[dimension][wid].extra.search )
-	
+
 	uid = new_image( gui, uid, pic_x + 109, pic_y, pic_z, "mods/p2k/files/pics/dot_purple_dark.png", 1, 10 )
 	new_text( gui, pic_x + 111, pic_y, pic_z, liner( gui, math.floor( performance_info + 0.5 ), 30 ), 1 )
-	
+
 	local windows = {}
 	for i = 1,26 do
 		if( window_count[i] > 0 ) then
@@ -1515,14 +1534,14 @@ function manager_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	if( #windows > 0 ) then
 		t_x = t_x + 2
 		for i = ( 9*page - 8 ), 9*page do
 			if( i > #windows ) then
 				break
 			end
-			
+
 			t_y = t_y + 11
 			local is_minimized = window_table[windows[i][1]][windows[i][2]].minimized
 			local is_processed = ( dimension == windows[i][1] ) and not( is_minimized )
@@ -1532,20 +1551,20 @@ function manager_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			new_text( gui, t_x + 2, t_y, pic_z - 0.01, string.char( windows[i][1] + 64 ).."::"..windows[i][2], style )
 			uid = new_image( gui, uid, t_x, t_y, pic_z, pic, nil, nil, nil, true ) --open window and move to current dimension + make it active
 			uid = new_tooltip( gui, uid, ui_z - 200, "DIMENSION | ID", nil, true )
-			
+
 			uid, r_clicked = new_input( gui, uid, t_x + 20, t_y, pic_z, 70, wid.."title"..i, windows[i][3] )
 			if( r_clicked ) then
 				inputter( function( k_buffer )
 					window_table[windows[i][1]][windows[i][2]].title = k_buffer
 				end)
 			end
-			
+
 			local perf_text = "_"
 			if( is_processed and performance_table_last[windows[i][1]][windows[i][2]] ~= nil ) then
 				perf_text = math.floor( performance_table_last[windows[i][1]][windows[i][2]]*100 + 0.5 )/100
 			end
 			uid = new_input( gui, uid, t_x + 91, t_y, pic_z, 29, wid.."ms"..i, perf_text, true )
-			
+
 			uid, clicked, r_clicked = new_button( gui, uid, t_x + 121, t_y, pic_z, "mods/p2k/files/pics/key_delete.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "Remove", "RMB to delete.", true )
 			if( r_clicked ) then
@@ -1553,7 +1572,7 @@ function manager_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	pic_x = pic_x + 136
 	pic_y = pic_y + 11
 	pic = "mods/p2k/files/pics/button_21_A.png"
@@ -1575,7 +1594,7 @@ function manager_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		end
 		dimension = dim
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "SCH" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -1584,28 +1603,28 @@ function manager_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		local custom_contents = function( gui, uid, pic_x, pic_y, pic_z, wid )
 			pic_x = pic_x + 2
 			pic_y = pic_y + 11
-			
+
 			local parent_wid = window_table[dimension][wid].extra.value
 			local searcher = window_table[dimension][parent_wid].extra.search
-			
+
 			uid, r_clicked = new_input( gui, uid, pic_x, pic_y, pic_z, 155, wid.."search", searcher )
 			if( r_clicked ) then
 				inputter( function( k_buffer )
 					window_table[dimension][parent_wid].extra.search = k_buffer
 				end)
 			end
-			
+
 			return uid
 		end
 		born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "SEARCH_BY_TITLE", nil, custom_contents, wid ))
 	end
-	
+
 	pic_y = pic_y + 66
 	uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #windows/9 ))
 	if( page ~= window_table[dimension][wid].extra.page ) then
 		window_table[dimension][wid].extra.page = page
 	end
-	
+
 	return uid
 end
 
@@ -1634,19 +1653,19 @@ function keyboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			keyboard_info[dimension][2] = keyboard_info[dimension][2]..key[3]
 		end
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 2, pic_y + 33, pic_z, "mods/p2k/files/pics/key_shift"..( window_table[dimension][wid].extra.shift_down and "_active" or "" )..".png" )
 	if( new_mnee_keyboard( clicked, "left_shift" )) then
 		play_key_sound( true )
 		window_table[dimension][wid].extra.shift_down = not( window_table[dimension][wid].extra.shift_down )
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 90, pic_y + 33, pic_z, "mods/p2k/files/pics/key_space.png" )
 	if( new_mnee_keyboard( clicked, "space" ) and target_acquired ) then
 		play_key_sound( true )
 		keyboard_info[dimension][2] = keyboard_info[dimension][2].." "
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 101, pic_y + 22, pic_z, "mods/p2k/files/pics/key_backspace.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "", "LMB to delete a symbol on the left. @ RMB to clear the input field.", true )
 	if( target_acquired ) then
@@ -1660,7 +1679,7 @@ function keyboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			keyboard_info[dimension][3] = ""
 		end
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 114, pic_y + 11, pic_z, "mods/p2k/files/pics/key_right.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "", "LMB to move to the right. @ RMB to jump to the end.", true )
 	if( target_acquired and keyboard_info[dimension][3] ~= "" ) then
@@ -1675,7 +1694,7 @@ function keyboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			keyboard_info[dimension][3] = ""
 		end
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 114, pic_y + 22, pic_z, "mods/p2k/files/pics/key_dlt.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "", "LMB to delete a symbol on the right. @ RMB to delete everything on the right.", true )
 	if( target_acquired and keyboard_info[dimension][3] ~= "" ) then
@@ -1688,7 +1707,7 @@ function keyboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			keyboard_info[dimension][3] = ""
 		end
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 114, pic_y + 33, pic_z, "mods/p2k/files/pics/key_left.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "", "LMB to move to the left. @ RMB to jump to the start.", true )
 	if( target_acquired and keyboard_info[dimension][2] ~= "" ) then
@@ -1703,7 +1722,7 @@ function keyboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			keyboard_info[dimension][2] = ""
 		end
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 173, pic_y + 11, pic_z, "mods/p2k/files/pics/key_upload.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Copy", "LMB to copy. @ RMB to copy and save.", true )
 	if( target_acquired ) then
@@ -1731,7 +1750,7 @@ function keyboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 173, pic_y + 22, pic_z, "mods/p2k/files/pics/key_clipboard.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Clipboard", nil, true )
 	if( new_mnee( clicked, "zl_open_clipboard" )) then
@@ -1741,7 +1760,7 @@ function keyboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			born_child( wid, create_clipboard({ window_table[dimension][wid].w_x, window_table[dimension][wid].w_y - 112 }, ui_z ))
 		end
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 173, pic_y + 33, pic_z, "mods/p2k/files/pics/key_download.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Paste", "LMB to paste. @ RMB to clear and paste.", true )
 	if( target_acquired ) then
@@ -1765,7 +1784,7 @@ function keyboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	local value = controls_lock ~= 0
 	uid, clicked = new_button( gui, uid, pic_x + 184, pic_y + 11, pic_z, "mods/p2k/files/pics/key_lock_"..( value and "B" or "A" )..".png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Controls Lock", "LMB to "..( value and "en" or "dis" ).."able vanilla inputs.", true )
@@ -1778,7 +1797,7 @@ function keyboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		end
 		new_log( "Character controls are ["..( value and "EN" or "DIS" ).."ABLED]" )
 	end
-	
+
 	value = ModSettingGetNextValue( "p2k.MNEE_VIP" )
 	uid, clicked = new_button( gui, uid, pic_x + 184, pic_y + 22, pic_z, "mods/p2k/files/pics/key_vip_"..( value and "B" or "A" )..".png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "VIP Access", "LMB to "..( value and "dis" or "en" ).."able VIP mode for all p2k bindings @ (they will remain active even if all mnee custom inputs were disabled).", true )
@@ -1787,7 +1806,7 @@ function keyboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		ModSettingSetNextValue( "p2k.MNEE_VIP", not( value ), false )
 		new_log( "VIP mode is ["..( value and "DIS" or "EN" ).."ABLED]" )
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 184, pic_y + 33, pic_z, "mods/p2k/files/pics/key_extra.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Extra Keys", nil, true )
 	if( new_mnee( clicked, "zc_more_keys" )) then
@@ -1801,13 +1820,13 @@ function keyboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		play_sound( "s4s" )
 		keyboard_info[dimension][2] = keyboard_info[dimension][2].."ඞ" --what are you looking for
 	end
-	
+
 	return uid
 end
 
 function keyboard_window_extra( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
-	
+
 	local custom_font = not( ModSettingGetNextValue( "p2k.NO_FONT" ) or IS_1K_MODE )
 	local magical_warning = "[WARNING] This symbol is magical within p2k."
 	local grid = {
@@ -1852,7 +1871,7 @@ function keyboard_window_extra( gui, uid, pic_x, pic_y, pic_z, wid )
 			end, "Popular Meme Sound Effects (For Video Editing)", "do it", },
 		},
 	}
-	
+
 	local page = window_table[dimension][wid].extra.layer
 	local layer = string.char( page + 64 )
 	local current = grid[layer]
@@ -1870,7 +1889,7 @@ function keyboard_window_extra( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	new_text( gui, pic_x + 4, pic_y + 33, pic_z - 0.01, layer, 3 )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 2, pic_y + 33, pic_z, "mods/p2k/files/pics/button_10_special.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Layer", "LMB to cycle forwards. @ RMB to cycle backwards.", true )
@@ -1883,16 +1902,16 @@ function keyboard_window_extra( gui, uid, pic_x, pic_y, pic_z, wid )
 		page = page - 1
 		window_table[dimension][wid].extra.layer = page < 1 and 4 or page
 	end
-	
+
 	return uid
 end
 
 function clipboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local t_x, t_y = pic_x, pic_y
-	
+
 	local page = window_table[dimension][wid].extra.page
-	
+
 	local clips = D_extractor( ModSettingGetNextValue( "p2k.CLIPBOARD_INFO" )) or {}
 	if( #clips > 0 ) then
 		t_x = t_x + 2
@@ -1900,7 +1919,7 @@ function clipboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			if( i > #clips ) then
 				break
 			end
-			
+
 			t_y = t_y + 11
 			local clip = clips[i]
 			uid, r_clicked = new_input( gui, uid, t_x, t_y, pic_z, 109, wid.."clip"..i, clip )
@@ -1910,7 +1929,7 @@ function clipboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					ModSettingSetNextValue( "p2k.CLIPBOARD_INFO", D_packer( clips ), false )
 				end)
 			end
-			
+
 			uid, clicked, r_clicked = new_button( gui, uid, t_x + 110, t_y, pic_z, "mods/p2k/files/pics/key_get.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "Load", nil, true )
 			if( clicked ) then
@@ -1918,7 +1937,7 @@ function clipboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				buffered_value = clip
 				new_log( "[BUFFERED]" )
 			end
-			
+
 			uid, clicked, r_clicked = new_button( gui, uid, t_x + 121, t_y, pic_z, "mods/p2k/files/pics/key_delete.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "Remove", "RMB to delete.", true )
 			if( r_clicked ) then
@@ -1928,7 +1947,7 @@ function clipboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	pic_x = pic_x + 136
 	pic_y = pic_y + 11
 	pic = "mods/p2k/files/pics/button_21_A.png"
@@ -1939,7 +1958,7 @@ function clipboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		play_sound( "delete" )
 		ModSettingSetNextValue( "p2k.CLIPBOARD_INFO", "|", false )
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "ADD" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -1954,30 +1973,30 @@ function clipboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					ModSettingSetNextValue( "p2k.CLIPBOARD_INFO", ModSettingGetNextValue( "p2k.CLIPBOARD_INFO" )..k_buffer.."|", false )
 				end)
 			end
-			
+
 			return uid
 		end
 		born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "ADD_CLIP", nil, custom_contents ))
 	end
-	
+
 	pic_y = pic_y + 66
 	uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #clips/9 ))
 	if( page ~= window_table[dimension][wid].extra.page ) then
 		window_table[dimension][wid].extra.page = page
 	end
-	
+
 	return uid
 end
 
 function frame_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
-	
+
 	pic_x = pic_x + 2
 	pic_y = pic_y + 11
 	new_text( gui, pic_x, pic_y, pic_z, "C:", 2 )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Frame Count", nil, true )
 	uid = new_input( gui, uid, pic_x + 8, pic_y, pic_z, 58, wid.."frame_c", GameGetFrameNum(), true )
-	
+
 	pic_y = pic_y + 11
 	local update_rate = ModSettingGetNextValue( "p2k.FPS_UPDATE_RATE" )
 	fps_timer[2] = GameGetRealWorldTimeSinceStarted()*1000
@@ -1997,7 +2016,7 @@ function frame_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	uid = new_tooltip( gui, uid, ui_z - 200, "FPS", nil, true )
 	uid = new_input( gui, uid, pic_x + 8, pic_y, pic_z, 23, wid.."frame_f", math.floor( 10*fps_timer[3] + 0.5 )/10, true, -20, true )
 	fps_timer[1] = fps_timer[2]
-	
+
 	pic_x = pic_x + 32
 	new_text( gui, pic_x, pic_y, pic_z, "L:", 2 )
 	uid = new_tooltip( gui, uid, ui_z - 200, "FPS Limit", nil, true )
@@ -2014,16 +2033,16 @@ function frame_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		play_sound( "button_generic" )
 		fps_dropper[4] = value and 0 or 1
 	end
-	
+
 	return uid
 end
 
 function teleboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local t_x, t_y = pic_x, pic_y
-	
+
 	local page = window_table[dimension][wid].extra.page
-	
+
 	local teles = DD_extractor( ModSettingGetNextValue( "p2k.TELEBOARD_INFO" )) or {}
 	if( #teles > 0 ) then
 		t_x = t_x + 2
@@ -2031,12 +2050,12 @@ function teleboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			if( i > #teles ) then
 				break
 			end
-			
+
 			t_y = t_y + 11
 			local tele = teles[i]
 			new_text( gui, t_x, t_y, pic_z, liner( gui, tele[1], 109 ), 2 )
 			uid = new_tooltip( gui, uid, ui_z - 200, tele[1] )
-			
+
 			uid, clicked, r_clicked = new_button( gui, uid, t_x + 110, t_y, pic_z, "mods/p2k/files/pics/key_tele.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "Teleport Captured", nil, true )
 			if( clicked ) then
@@ -2050,7 +2069,7 @@ function teleboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					new_log( "[ERROR] None is captured!", true )
 				end
 			end
-			
+
 			uid, clicked, r_clicked = new_button( gui, uid, t_x + 121, t_y, pic_z, "mods/p2k/files/pics/key_delete.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "Remove", "RMB to delete.", true )
 			if( r_clicked ) then
@@ -2060,7 +2079,7 @@ function teleboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	pic_x = pic_x + 136
 	pic_y = pic_y + 11
 	pic = "mods/p2k/files/pics/button_21_A.png"
@@ -2082,12 +2101,12 @@ function teleboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					end)
 				end
 			end
-			
+
 			return uid
 		end
 		born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "ENTER_SPOT_NAME", nil, custom_contents ))
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "CMR" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -2103,23 +2122,23 @@ function teleboard_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			new_log( "[ERROR] None is captured!", true )
 		end
 	end
-	
+
 	pic_y = pic_y + 66
 	uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #teles/9 ))
 	if( page ~= window_table[dimension][wid].extra.page ) then
 		window_table[dimension][wid].extra.page = page
 	end
-	
+
 	return uid
 end
 
 function zoom_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
-	
+
 	local w, h = GuiGetScreenDimensions( gui )
 	local v_x = ( pic_x + 79.5 )/w
 	local v_y = -( pic_y + 74 )/h
-	
+
 	pic_x = pic_x + 2
 	pic_y = pic_y + 11
 	local scale = ModSettingGetNextValue( "p2k.ZOOM_SCALE" )
@@ -2129,7 +2148,7 @@ function zoom_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			ModSettingSetNextValue( "p2k.ZOOM_SCALE", k_buffer, false )
 		end)
 	end
-	
+
 	pic_x = pic_x + 123
 	local raw = ModSettingGetNextValue( "p2k.ZOOM_RAW" )
 	uid, clicked = new_toggler( gui, uid, pic_x, pic_y, pic_z, raw, 10, {"N", "R"})
@@ -2138,7 +2157,7 @@ function zoom_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		play_sound( "button_generic" )
 		ModSettingSetNextValue( "p2k.ZOOM_RAW", not( raw ), false )
 	end
-	
+
 	pic_x = pic_x + 11
 	local value = ModSettingGetNextValue( "p2k.ZOOM_MODE" )
 	local modes = { "Lense", "TV", "Pointer", }
@@ -2147,7 +2166,7 @@ function zoom_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	if( clicked ) then
 		ModSettingSetNextValue( "p2k.ZOOM_MODE", value, false )
 	end
-	
+
 	pic_x = pic_x + 11
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "\"TV\" mode Anchor", nil, true )
@@ -2157,7 +2176,7 @@ function zoom_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		zoom_target[2] = -v_y
 		new_log( "[ANCHOR SET]", true )
 	end
-	
+
 	local p_x = v_x
 	local p_y = v_y
 	if( value == 2 ) then
@@ -2168,23 +2187,23 @@ function zoom_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		p_x = m_x/w
 		p_y = -m_y/h
 	end
-	
+
 	GameSetPostFxParameter( "viewer_info", v_x, v_y, 1/tonumber( scale ), b2n( raw ))
 	GameSetPostFxParameter( "pointer_info", p_x, p_y, w, h )
-	
+
 	return uid
 end
 
 function transform_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local is_updated = false
-	
+
 	pic_x = pic_x + 2
 	pic_y = pic_y + 11
 	if( captured_entity ~= 0 ) then
 		local t_x, t_y, t_r, t_s_x, t_s_y = EntityGetTransform( captured_entity )
 		local k_buffer = keyboard_info[dimension][2]..keyboard_info[dimension][3]
-		
+
 		new_text( gui, pic_x, pic_y, pic_z, "X:", 2 )
 		uid, r_clicked = new_input( gui, uid, pic_x + 9, pic_y, pic_z, 70, wid.."x", t_x )
 		if( r_clicked ) then
@@ -2195,7 +2214,7 @@ function transform_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 			keyboard_info[dimension] = { "", "<>", "" }
 		end
-		
+
 		pic_y = pic_y + 11
 		new_text( gui, pic_x, pic_y, pic_z, "Y:", 2 )
 		uid, r_clicked = new_input( gui, uid, pic_x + 9, pic_y, pic_z, 70, wid.."y", t_y )
@@ -2207,7 +2226,7 @@ function transform_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 			keyboard_info[dimension] = { "", "<>", "" }
 		end
-		
+
 		pic_y = pic_y + 11
 		new_text( gui, pic_x, pic_y, pic_z, "R:", 2 )
 		uid, r_clicked = new_input( gui, uid, pic_x + 9, pic_y, pic_z, 70, wid.."r", math.deg( t_r ))
@@ -2219,7 +2238,7 @@ function transform_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 			keyboard_info[dimension] = { "", "<>", "" }
 		end
-		
+
 		pic_y = pic_y + 11
 		new_text( gui, pic_x, pic_y, pic_z, "W:", 2 )
 		uid, r_clicked = new_input( gui, uid, pic_x + 9, pic_y, pic_z, 70, wid.."w", t_s_x )
@@ -2231,7 +2250,7 @@ function transform_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 			keyboard_info[dimension] = { "", "<>", "" }
 		end
-		
+
 		pic_y = pic_y + 11
 		new_text( gui, pic_x, pic_y, pic_z, "H:", 2 )
 		uid, r_clicked = new_input( gui, uid, pic_x + 9, pic_y, pic_z, 70, wid.."h", t_s_y )
@@ -2243,7 +2262,7 @@ function transform_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 			keyboard_info[dimension] = { "", "<>", "" }
 		end
-		
+
 		if( is_updated ) then
 			EntitySetTransform( captured_entity, t_x, t_y, t_r, t_s_x, t_s_y )
 			EntityApplyTransform( captured_entity, t_x, t_y, t_r, t_s_x, t_s_y )
@@ -2251,13 +2270,13 @@ function transform_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	else
 		new_text( gui, pic_x, pic_y, pic_z, "[ERROR]", 2 )
 	end
-	
+
 	return uid
 end
 
 function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
-	
+
 	pic_x = pic_x + 2
 	pic_y = pic_y + 11
 	new_text( gui, pic_x, pic_y, pic_z, "P:", 2 )
@@ -2268,7 +2287,7 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			ecs_info[1] = k_buffer
 		end)
 	end
-	
+
 	uid, clicked = new_button( gui, uid, pic_x + 69, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Load", "LMB to spawn at the camera position.", true )
 	if( clicked ) then
@@ -2276,7 +2295,7 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		local out = EntityLoad( ecs_info[1], cam_x, cam_y )
 		new_log(( out == nil or out == "" or out == 0 ) and "[ERROR] Invalid path!" or "[LOADED]", true )
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x, pic_y, pic_z, "N:", 2 )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Get with ID", "Enter the numerical ID.", true )
@@ -2286,13 +2305,13 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			ecs_info[2] = k_buffer
 		end)
 	end
-	
+
 	uid, clicked = new_button( gui, uid, pic_x + 45, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Confirm", nil, true )
 	if( clicked ) then
 		create_entity_window({new_spawn()}, ui_z, tonumber( ecs_info[2] ))
 	end
-	
+
 	pic = "mods/p2k/files/pics/button_21_A.png"
 	new_text( gui, pic_x + 60, pic_y, pic_z - 0.01, "WSE" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 58, pic_y, pic_z, pic )
@@ -2300,7 +2319,7 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	if( clicked ) then
 		create_entity_window({new_spawn()}, ui_z, GameGetWorldStateEntity())
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x, pic_y, pic_z, "T:", 2 )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Get with Tag", nil, true )
@@ -2310,14 +2329,14 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			ecs_info[3] = k_buffer
 		end)
 	end
-	
+
 	uid, clicked = new_button( gui, uid, pic_x + 45, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Confirm", nil, true )
 	if( clicked ) then
 		local custom_contents = function( gui, uid, pic_x, pic_y, pic_z, wid )
 			local pic, clicked, r_clicked = 0, 0, 0
 			local t_x, t_y = pic_x, pic_y
-			
+
 			local page = window_table[dimension][wid].extra.value.page
 			local tbl = EntityGetWithTag( window_table[dimension][wid].extra.value.target ) or {}
 			table.sort( tbl )
@@ -2327,7 +2346,7 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					if( i > #tbl ) then
 						break
 					end
-					
+
 					t_y = t_y + 11
 					local entity = tbl[i]
 					uid, clicked, r_clicked = new_toggler( gui, uid, t_x, t_y, pic_z, captured_entity == entity, 120, liner( gui, tostring( entity ), 116 ))
@@ -2339,7 +2358,7 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 						play_sound( "button_special" )
 						captured_entity = entity
 					end
-					
+
 					uid, clicked, r_clicked = new_button( gui, uid, t_x + 121, t_y, pic_z, "mods/p2k/files/pics/key_delete.png" )
 					uid = new_tooltip( gui, uid, ui_z - 200, "Remove", "RMB to delete.", true )
 					if( r_clicked ) then
@@ -2348,7 +2367,7 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					end
 				end
 			end
-			
+
 			pic_x = pic_x + 136
 			pic_y = pic_y + 11
 			new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "EDT" )
@@ -2365,18 +2384,18 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 							window_table[dimension][window_table[dimension][wid].extra.value].extra.value.target = k_buffer
 						end)
 					end
-					
+
 					return uid
 				end
 				born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "EDIT_SEARCH", nil, custom_contents, wid ))
 			end
-			
+
 			pic_y = pic_y + 77
 			uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #tbl/9 ))
 			if( page ~= window_table[dimension][wid].extra.value.page ) then
 				window_table[dimension][wid].extra.value.page = page
 			end
-			
+
 			return uid
 		end
 		function dlt_action( stuff )
@@ -2389,14 +2408,14 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		end
 		create_edit_window({new_spawn()}, ui_z, "TAGGED_SEARCH", "big_A", custom_contents, { page = 1, target = ecs_info[3], }, dlt_action )
 	end
-	
+
 	new_text( gui, pic_x + 60, pic_y, pic_z - 0.01, "PSE" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 58, pic_y, pic_z, pic )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Player State Entity", nil, true )
 	if( clicked ) then
 		create_entity_window({new_spawn()}, ui_z, EntityGetWithName( "player_stats" ))
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x, pic_y, pic_z, "B:", 2 )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Load Blank", "Enter the name.", true )
@@ -2406,7 +2425,7 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			ecs_info[4] = k_buffer
 		end)
 	end
-	
+
 	uid, clicked = new_button( gui, uid, pic_x + 45, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Load", "LMB to spawn at the camera position.", true )
 	if( clicked ) then
@@ -2414,27 +2433,27 @@ function ecs_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		EntitySetTransform( EntityCreateNew( ecs_info[4] ), cam_x, cam_y, 0, 1, 1 )
 		new_log( "[BLANK CREATED]" )
 	end
-	
+
 	new_text( gui, pic_x + 60, pic_y, pic_z - 0.01, "PLR" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 58, pic_y, pic_z, pic )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Player", nil, true )
 	if( clicked ) then
 		create_entity_window({new_spawn()}, ui_z, get_player())
 	end
-	
+
 	return uid
 end
 
 function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
-	
+
 	local values = window_table[dimension][wid].extra
-	
+
 	pic_x = pic_x + 2
 	pic_y = pic_y + 11
 	if( captured_entity ~= 0 ) then
 		local cap_x, cap_y = EntityGetTransform( captured_entity )
-	
+
 		new_text( gui, pic_x, pic_y, pic_z, "M:", 2 )
 		uid = new_tooltip( gui, uid, ui_z - 200, "Matter Applier", "Enter the matter name.", true )
 		uid, r_clicked = new_input( gui, uid, pic_x + 8, pic_y, pic_z, 34, wid.."matter", values.matter )
@@ -2443,7 +2462,7 @@ function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				window_table[dimension][wid].extra.matter = k_buffer
 			end)
 		end
-		
+
 		uid, clicked, r_clicked = new_button( gui, uid, pic_x + 43, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 		uid = new_tooltip( gui, uid, ui_z - 200, "Confirm", "LMB to add stains. @ RMB to force ingest.", true )
 		if( clicked ) then
@@ -2456,7 +2475,7 @@ function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			new_log( "[INGESTED]" )
 			EntityIngestMaterial( captured_entity, CellFactory_GetType( values.matter ), 10 )
 		end
-		
+
 		pic_y = pic_y + 11
 		new_text( gui, pic_x, pic_y, pic_z, "D:", 2 )
 		uid = new_tooltip( gui, uid, ui_z - 200, "Hitter", "Enter the damage amount.", true )
@@ -2466,7 +2485,7 @@ function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				window_table[dimension][wid].extra.damage[1] = tonumber( k_buffer )
 			end)
 		end
-		
+
 		local ragdoll_effects = {
 			{ "_", "N", "E", "S", "F", "M", "C", "D", "R", "P", },
 			{ "NONE", "NORMAL", "BLOOD_EXPLOSION", "BLOOD_SPRAY", "FROZEN", "CONVERT_TO_MATERIAL", "CUSTOM_RAGDOLL_ENTITY", "DISINTEGRATED", "NO_RAGDOLL_FILE", "PLAYER_RAGDOLL_CAMERA", },
@@ -2481,7 +2500,7 @@ function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		if( clicked ) then
 			window_table[dimension][wid].extra.damage[2] = value
 		end
-		
+
 		new_text( gui, pic_x + 45, pic_y, pic_z - 0.01, damage_type[1][values.damage[3]] )
 		uid, clicked, r_clicked = new_button( gui, uid, pic_x + 43, pic_y, pic_z, "mods/p2k/files/pics/button_10_A.png" )
 		uid = new_tooltip( gui, uid, ui_z - 200, "Damage Type: "..damage_type[2][values.damage[3]], "LMB to switch the damage_type. @ RMB to hit the captured entity.", true )
@@ -2496,7 +2515,7 @@ function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			play_sound( "button_special" )
 			EntityInflictDamage( captured_entity, values.damage[1]/25, damage_type[2][values.damage[3]], "ULTIMATE_POWER", ragdoll_effects[2][values.damage[2]], 0, 0, captured_entity, cap_x, cap_y, 0 )
 		end
-		
+
 		pic_x = pic_x + 56
 		new_text( gui, pic_x, pic_y, pic_z, "P:", 2 )
 		uid = new_tooltip( gui, uid, ui_z - 200, "Entity Appender", "Enter the path.", true )
@@ -2506,7 +2525,7 @@ function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				window_table[dimension][wid].extra.path = k_buffer
 			end)
 		end
-		
+
 		uid, clicked = new_button( gui, uid, pic_x + 56, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 		uid = new_tooltip( gui, uid, ui_z - 200, "Load", "LMB to append to the captured entity.", true )
 		if( clicked ) then
@@ -2514,7 +2533,7 @@ function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			new_log( "[LOADED]" )
 			EntityLoadToEntity( values.path, captured_entity )
 		end
-		
+
 		pic_y = pic_y - 11
 		new_text( gui, pic_x, pic_y, pic_z, "A:", 2 )
 		uid = new_tooltip( gui, uid, ui_z - 200, "Animator", "Enter the animation name.", true )
@@ -2524,14 +2543,14 @@ function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				window_table[dimension][wid].extra.anim = k_buffer
 			end)
 		end
-		
+
 		uid, clicked, r_clicked = new_button( gui, uid, pic_x + 43, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 		uid = new_tooltip( gui, uid, ui_z - 200, "Play", "LMB to force the animation on the captured entity.", true )
 		if( clicked ) then
 			play_sound( "button_generic" )
 			GamePlayAnimation( captured_entity, values.anim, 1 )
 		end
-		
+
 		pic_x = pic_x + 56
 		if( captured_entity ~= values.boxes[2][1] ) then
 			window_table[dimension][wid].extra.boxes[2] = { captured_entity, 1, }
@@ -2551,7 +2570,7 @@ function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			play_sound( "button_special" )
 			window_table[dimension][wid].extra.boxes[1] = not( values.boxes[1] )
 		end
-		
+
 		local poses = { 0, 0, 0, 0, }
 		if( values.boxes[1] ) then
 			if( #bxs > 0 ) then
@@ -2570,7 +2589,7 @@ function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				poses[4] = ComponentGetValue2( char_comp, "collision_aabb_max_y" )
 			end
 		end
-		
+
 		local duration = IS_1K_MODE and 1 or 2
 		pic = "mods/p2k/files/pics/dot_purple_dark.png"
 		GameCreateSpriteForXFrames( pic, cap_x + poses[1], cap_y, true, 0, 0, duration, true )
@@ -2593,15 +2612,15 @@ function animaler_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	else
 		new_text( gui, pic_x, pic_y, pic_z, "[ERROR]", 2 )
 	end
-	
+
 	return uid
 end
 
 function scene_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
-	
+
 	local info = window_table[dimension][wid].extra.info
-	
+
 	pic_x = pic_x + 2
 	pic_y = pic_y + 11
 	new_text( gui, pic_x, pic_y, pic_z, "M:", 2 )
@@ -2612,9 +2631,9 @@ function scene_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			window_table[dimension][wid].extra.info[1] = k_buffer
 		end)
 	end
-	
+
 	uid = new_image( gui, uid, pic_x + 129, pic_y, pic_z, "mods/p2k/files/pics/dot_purple_dark.png", 1, 43 )
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x, pic_y, pic_z, "C:", 2 )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Colours", "See LoadPixelScene in the lua_api_doc.", true )
@@ -2624,7 +2643,7 @@ function scene_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			window_table[dimension][wid].extra.info[2] = k_buffer
 		end)
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x, pic_y, pic_z, "B:", 2 )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Background", "See LoadPixelScene in the lua_api_doc.", true )
@@ -2634,7 +2653,7 @@ function scene_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			window_table[dimension][wid].extra.info[3] = k_buffer
 		end)
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x, pic_y, pic_z, "T:", 2 )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Conversion Table", "See LoadPixelScene in the lua_api_doc.", true )
@@ -2644,7 +2663,7 @@ function scene_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			window_table[dimension][wid].extra.info[4] = k_buffer
 		end)
 	end
-	
+
 	pic_x = pic_x + 131
 	pic_y = pic_y - 11
 	new_text( gui, pic_x, pic_y, pic_z, "ET:", 2 )
@@ -2654,7 +2673,7 @@ function scene_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		play_sound( "button_generic" )
 		window_table[dimension][wid].extra.info[7] = not( info[7] )
 	end
-	
+
 	pic_y = pic_y - 11
 	new_text( gui, pic_x, pic_y, pic_z, "BC:", 2 )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Biome Checks", "See LoadPixelScene in the lua_api_doc.", true )
@@ -2663,7 +2682,7 @@ function scene_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		play_sound( "button_generic" )
 		window_table[dimension][wid].extra.info[6] = not( info[6] )
 	end
-	
+
 	pic_y = pic_y - 11
 	new_text( gui, pic_x, pic_y, pic_z, "Z:", 2 )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Z-level", "See LoadPixelScene in the lua_api_doc.", true )
@@ -2673,7 +2692,7 @@ function scene_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			window_table[dimension][wid].extra.info[5] = tonumber( k_buffer )
 		end)
 	end
-	
+
 	pic_y = pic_y + 33
 	pic_x = pic_x + 7
 	uid, clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
@@ -2691,7 +2710,7 @@ end
 function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local t_x, t_y = pic_x, pic_y
-	
+
 	local page = window_table[dimension][wid].extra.page
 	local searcher = window_table[dimension][wid].extra.comp_tag
 	local entity_id = window_table[dimension][wid].extra.entity
@@ -2699,7 +2718,7 @@ function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		pic_x = pic_x + 2
 		pic_y = pic_y + 11
 		new_text( gui, pic_x, pic_y, pic_z, "[CRITICAL ERROR]", 2 )
-		
+
 		pic_y = pic_y + 11
 		uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/button_61_A.png" )
 		new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "Load Captured" )
@@ -2713,10 +2732,10 @@ function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				new_log( "[ERROR] None is captured!", true )
 			end
 		end
-		
+
 		return uid
 	end
-	
+
 	local full_comps = EntityGetAllComponents( entity_id ) or {}
 	local comps = {}
 	if( searcher == "" ) then
@@ -2728,14 +2747,14 @@ function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	if( #comps > 0 ) then
 		t_x = t_x + 2
 		for i = ( 9*page - 8 ), 9*page do
 			if( i > #comps ) then
 				break
 			end
-			
+
 			t_y = t_y + 11
 			local comp_id = comps[i]
 			local is_enabled = ComponentGetIsEnabled( comp_id )
@@ -2749,7 +2768,7 @@ function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				play_sound( "button_special" )
 				EntitySetComponentIsEnabled( entity_id, comp_id, not( is_enabled ))
 			end
-			
+
 			uid, clicked, r_clicked = new_button( gui, uid, t_x + 121, t_y, pic_z, "mods/p2k/files/pics/key_delete.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "Remove", "RMB to delete.", true )
 			if( r_clicked ) then
@@ -2758,7 +2777,7 @@ function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	pic_x = pic_x + 136
 	pic_y = pic_y + 11
 	local is_enabled = captured_entity == entity_id
@@ -2777,7 +2796,7 @@ function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		play_sound( "button_special" )
 		ModSettingSetNextValue( "p2k.TRANSFORMER", not( transform_editor ), false )
 	end
-	
+
 	pic_y = pic_y + 11
 	pic = "mods/p2k/files/pics/button_21_A.png"
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "FNM" )
@@ -2788,7 +2807,7 @@ function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		buffered_value = EntityGetFilename( entity_id )
 		new_log( "[BUFFERED]: "..buffered_value, true )
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "TGS" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -2800,22 +2819,22 @@ function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		local custom_contents = function( gui, uid, pic_x, pic_y, pic_z, wid )
 			pic_x = pic_x + 2
 			pic_y = pic_y + 11
-			
+
 			local parent_wid = window_table[dimension][wid].extra.value
 			local searcher = window_table[dimension][parent_wid].extra.comp_tag
-			
+
 			uid, r_clicked = new_input( gui, uid, pic_x, pic_y, pic_z, 155, wid.."search", searcher )
 			if( r_clicked ) then
 				inputter( function( k_buffer )
 					window_table[dimension][parent_wid].extra.comp_tag = k_buffer
 				end)
 			end
-			
+
 			return uid
 		end
 		born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "SEARCH_BY_TAG", nil, custom_contents, wid ))
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "NME" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -2843,12 +2862,12 @@ function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					end
 				end)
 			end
-			
+
 			return uid
 		end
 		born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "EDIT_NAME", nil, custom_contents, wid ))
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "CLD" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -2864,7 +2883,7 @@ function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			new_log( "[ERROR] This is the root!", true )
 		end
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "ADD" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -2884,32 +2903,32 @@ function entity_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					EntitySetComponentIsEnabled( entity_id, EntityAddComponent2( entity_id, k_buffer ), false )
 				end)
 			end
-			
+
 			return uid
 		end
 		born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "ADD_COMPONENT", nil, custom_contents, wid ))
 	end
-	
+
 	pic_y = pic_y + 22
 	uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #comps/9 ))
 	if( page ~= window_table[dimension][wid].extra.page ) then
 		window_table[dimension][wid].extra.page = page
 	end
-	
+
 	return uid
 end
 
 function child_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local t_x, t_y = pic_x, pic_y
-	
+
 	local page = window_table[dimension][wid].extra.page
 	local entity_id = window_table[dimension][wid].extra.entity
 	if( not( EntityGetIsAlive( entity_id ))) then
-		pic_x = pic_x + 2	
+		pic_x = pic_x + 2
 		pic_y = pic_y + 11
 		new_text( gui, pic_x, pic_y, pic_z, "[CRITICAL ERROR]", 2 )
-		
+
 		pic_y = pic_y + 11
 		new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "Load Captured" )
 		uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/button_61_A.png" )
@@ -2922,18 +2941,18 @@ function child_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				new_log( "[ERROR] None is captured!", true )
 			end
 		end
-		
+
 		return uid
 	end
 	local children = EntityGetAllChildren( entity_id ) or {}
-	
+
 	if( #children > 0 ) then
 		t_x = t_x + 2
 		for i = ( 9*page - 8 ), 9*page do
 			if( i > #children ) then
 				break
 			end
-			
+
 			t_y = t_y + 11
 			local child_id = children[i]
 			pic = "mods/p2k/files/pics/button_109_A.png"
@@ -2943,14 +2962,14 @@ function child_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			if( clicked ) then
 				create_entity_window({new_spawn()}, ui_z, child_id )
 			end
-			
+
 			uid, clicked, r_clicked = new_button( gui, uid, t_x + 110, t_y, pic_z, "mods/p2k/files/pics/key_unparent.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "Remove", "RMB to unparent the child.", true )
 			if( r_clicked ) then
 				play_sound( "button_special" )
 				EntityRemoveFromParent( child_id )
 			end
-			
+
 			uid, clicked, r_clicked = new_button( gui, uid, t_x + 121, t_y, pic_z, "mods/p2k/files/pics/key_delete.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "Kill", "RMB to delete the child.", true )
 			if( r_clicked ) then
@@ -2959,7 +2978,7 @@ function child_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	pic_x = pic_x + 136
 	pic_y = pic_y + 11
 	pic = "mods/p2k/files/pics/button_21_A.png"
@@ -2972,7 +2991,7 @@ function child_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			EntityRemoveFromParent( child )
 		end
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "DLT" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -2983,7 +3002,7 @@ function child_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			EntityKill( child )
 		end
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "ADD" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -3002,27 +3021,27 @@ function child_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			new_log( "[ERROR] None is captured!", true )
 		end
 	end
-	
+
 	pic_y = pic_y + 55
 	uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #children/9 ))
 	if( page ~= window_table[dimension][wid].extra.page ) then
 		window_table[dimension][wid].extra.page = page
 	end
-	
+
 	return uid
 end
 
 function tag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local t_x, t_y = pic_x, pic_y
-	
+
 	local page = window_table[dimension][wid].extra.page
 	local entity_id = window_table[dimension][wid].extra.entity
 	if( not( EntityGetIsAlive( entity_id ))) then
-		pic_x = pic_x + 2	
+		pic_x = pic_x + 2
 		pic_y = pic_y + 11
 		new_text( gui, pic_x, pic_y, pic_z, "[CRITICAL ERROR]", 2 )
-		
+
 		pic_y = pic_y + 11
 		new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "Load Captured" )
 		uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/button_61_A.png" )
@@ -3035,10 +3054,10 @@ function tag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				new_log( "[ERROR] None is captured!", true )
 			end
 		end
-		
+
 		return uid
 	end
-	
+
 	local tags = magic_parser( EntityGetTags( entity_id ), "," ) or {}
 	if( #tags > 0 ) then
 		t_x = t_x + 2
@@ -3046,7 +3065,7 @@ function tag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			if( i > #tags ) then
 				break
 			end
-			
+
 			t_y = t_y + 11
 			new_text( gui, t_x, t_y, pic_z, liner( gui, tags[i], 120 ), 2 )
 			uid = new_tooltip( gui, uid, ui_z - 200, tags[i] )
@@ -3058,7 +3077,7 @@ function tag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 		end
 	end
-	
+
 	pic_x = pic_x + 136
 	pic_y = pic_y + 11
 	pic = "mods/p2k/files/pics/button_21_A.png"
@@ -3071,7 +3090,7 @@ function tag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			EntityRemoveTag( entity_id, tag )
 		end
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "ADD" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -3091,25 +3110,25 @@ function tag_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					EntityAddTag( entity_id, k_buffer )
 				end)
 			end
-			
+
 			return uid
 		end
 		born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "ADD_TAG", nil, custom_contents, wid ))
 	end
-	
+
 	pic_y = pic_y + 66
 	uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #tags/9 ))
 	if( page ~= window_table[dimension][wid].extra.page ) then
 		window_table[dimension][wid].extra.page = page
 	end
-	
+
 	return uid
 end
 
 function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local t_x, t_y = pic_x, pic_y
-	
+
 	local page = window_table[dimension][wid].extra.page
 	local entity_id = window_table[dimension][wid].extra.entity
 	local comp_id = window_table[dimension][wid].extra.comp
@@ -3126,7 +3145,7 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	else
 		fields = ComponentObjectGetMembers( comp_id, object ) or {}
 	end
-	
+
 	local comp_name = ComponentGetTypeName( comp_id )
 	local counter = 1
 	local starter = 9*page - 9
@@ -3142,7 +3161,7 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			uid = new_tooltip( gui, uid, ui_z - 200, field )
 			if( is_supported( comp_name, field )) then
 				local new_value = "<>"
-				
+
 				if( is_object( field )) then
 					new_text( gui, t_x + 72, t_y, pic_z - 0.01, "[EDIT]" )
 					uid, clicked, r_clicked = new_button( gui, uid, t_x + 70, t_y, pic_z, "mods/p2k/files/pics/button_61_A.png" )
@@ -3191,7 +3210,7 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 											end)
 										end
 									end
-									
+
 									pic_x = pic_x + shapes[ #value ] + ( #values > 1 and 2 or 1 )
 									uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_delete.png" )
 									if( r_clicked ) then
@@ -3199,7 +3218,7 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 										keyboard_info[dimension][2] = ""
 										keyboard_info[dimension][3] = ""
 									end
-									
+
 									return uid
 								end
 								born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "VECTOR:"..field, nil, custom_contents, { wid, field }))
@@ -3239,7 +3258,7 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 						end
 					end
 				end
-				
+
 				if( new_value ~= "<>" ) then
 					if( object == nil ) then
 						ComponentSetValue2( comp_id, field, new_value )
@@ -3254,7 +3273,7 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		end
 		counter = counter + 1
 	end
-	
+
 	pic_x = pic_x + 136
 	pic_y = pic_y + 11
 	local is_enabled = ComponentGetIsEnabled( comp_id )
@@ -3264,7 +3283,7 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		play_sound( "button_generic" )
 		EntitySetComponentIsEnabled( entity_id, comp_id, not( is_enabled ))
 	end
-	
+
 	pic_y = pic_y + 11
 	pic = "mods/p2k/files/pics/button_21_A.png"
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "OWN" )
@@ -3273,7 +3292,7 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	if( clicked ) then
 		create_entity_window({new_spawn()}, ui_z, entity_id )
 	end
-	
+
 	pic_y = pic_y + 11
 	new_text( gui, pic_x + 2, pic_y, pic_z - 0.01, "TGS" )
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, pic )
@@ -3294,7 +3313,7 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					new_log( "[TAG ADDDED]", true )
 				end)
 			end
-			
+
 			pic_x = pic_x + 134
 			uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_check.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "State Check", nil, true )
@@ -3303,7 +3322,7 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				local tag_name = keyboard_info[dimension][2]..keyboard_info[dimension][3]
 				new_log( tag_name..": ["..string.upper( tostring( ComponentHasTag( comp_id, tag_name ))).."]", true )
 			end
-			
+
 			pic_x = pic_x + 11
 			uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_delete.png" )
 			uid = new_tooltip( gui, uid, ui_z - 200, "Remove", "RMB to delete.", true )
@@ -3318,12 +3337,12 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 					new_log( "[ERROR] Tag isn't real!", true )
 				end
 			end
-			
+
 			return uid
 		end
 		born_child( wid, create_edit_window({new_spawn( wid )}, ui_z, "TAGS:"..ComponentGetTypeName( comp_id ), nil, custom_contents, wid ))
 	end
-	
+
 	if( comp_name == "SpriteComponent" ) then
 		pic = "mods/p2k/files/pics/button_21_A.png"
 		new_text( gui, pic_x + 2, pic_y + 11, pic_z - 0.01, "RFR" )
@@ -3335,7 +3354,7 @@ function comp_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			EntityRefreshSprite( entity_id, comp_id )
 		end
 	end
-	
+
 	pic_y = pic_y + 55
 	uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil(( counter - 1 )/9 ))
 	if( page ~= window_table[dimension][wid].extra.page ) then
@@ -3348,7 +3367,7 @@ end
 function table_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local t_x, t_y = pic_x, pic_y
-	
+
 	local page = window_table[dimension][wid].extra.page
 	local entity_id = window_table[dimension][wid].extra.entity
 	local comp_id = window_table[dimension][wid].extra.comp
@@ -3356,7 +3375,7 @@ function table_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		pic_x = pic_x + 2
 		pic_y = pic_y + 11
 		new_text( gui, pic_x, pic_y, pic_z, "[CRITICAL ERROR]", 2 )
-		
+
 		return uid
 	end
 	local object = window_table[dimension][wid].extra.object
@@ -3367,7 +3386,7 @@ function table_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	else
 		tbl = ComponentObjectGetValue2( comp_id, object, field ) or {}
 	end
-	
+
 	t_x = t_x + 2
 	local counter = 1
 	local updater = false
@@ -3385,7 +3404,7 @@ function table_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			end
 			new_text( gui, t_x, t_y, pic_z, liner( gui, fancy_text, 69 ), 2 )
 			uid = new_tooltip( gui, uid, ui_z - 200, fancy_text )
-			
+
 			uid, r_clicked = new_input( gui, uid, t_x + 70, t_y, pic_z, 61, wid..tostring( fancy_text ), value )
 			if( r_clicked ) then
 				inputter( function( k_buffer )
@@ -3406,28 +3425,28 @@ function table_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		end
 		counter = counter + 1
 	end
-	
+
 	if( updater ) then
 		ComponentSetValue2( comp_id, field, tbl )
 	end
-	
+
 	pic_x = pic_x + 136
 	pic_y = pic_y + 88
 	uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #tbl/9 ))
 	if( page ~= window_table[dimension][wid].extra.page ) then
 		window_table[dimension][wid].extra.page = page
 	end
-	
+
 	return uid
 end
 
 function misc_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
-	
+
 	local info = window_table[dimension][wid].extra
 	local gonna_update = info.uniform_info[3]
 	local gonna_execute = info.file_info[2]
-	
+
 	pic_x = pic_x + 2
 	pic_y = pic_y + 11
 	uid, r_clicked = new_input( gui, uid, pic_x, pic_y, pic_z, 48, wid.."uni_name", info.uniform_info[1] )
@@ -3436,7 +3455,7 @@ function misc_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			window_table[dimension][wid].extra.uniform_info[1] = k_buffer
 		end)
 	end
-	
+
 	local t_x, t_y = pic_x, pic_y
 	t_x = t_x + 49
 	for i = 1,4 do
@@ -3446,10 +3465,10 @@ function misc_window( gui, uid, pic_x, pic_y, pic_z, wid )
 				window_table[dimension][wid].extra.uniform_info[2][i] = k_buffer
 			end)
 		end
-		
+
 		t_x = t_x + 24
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, t_x, pic_y, pic_z, "mods/p2k/files/pics/key_confirm"..( gonna_update and "_special" or "" )..".png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Shader Uniform Editor: UNIFORM_NAME | VALUES", "LMB to apply the uniform. @ RMB to toggle the continuous mode." )
 	if( clicked ) then
@@ -3462,7 +3481,7 @@ function misc_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		new_log( "Continuous mode ["..( window_table[dimension][wid].extra.uniform_info[3] and "DIS" or "EN" ).."ABLED]" )
 		window_table[dimension][wid].extra.uniform_info[3] = not( info.uniform_info[3] )
 	end
-	
+
 	pic_y = pic_y + 11
 	uid, r_clicked = new_input( gui, uid, pic_x, pic_y, pic_z, 120, wid.."back_path", info.back_info[1] )
 	if( r_clicked ) then
@@ -3470,14 +3489,14 @@ function misc_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			window_table[dimension][wid].extra.back_info[1] = k_buffer
 		end)
 	end
-	
+
 	uid, r_clicked = new_input( gui, uid, pic_x + 121, pic_y, pic_z, 23, wid.."back_z", info.back_info[2], false, -20, true )
 	if( r_clicked ) then
 		inputter( function( k_buffer )
 			window_table[dimension][wid].extra.back_info[2] = tonumber( k_buffer )
 		end)
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 145, pic_y, pic_z, "mods/p2k/files/pics/key_confirm.png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Background Sprite Loader: PATH | Z-LEVEL", "LMB to load at the camera position." )
 	if( clicked ) then
@@ -3485,7 +3504,7 @@ function misc_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		new_log( "[LOADED]", true )
 		LoadBackgroundSprite( info.back_info[1], cam_x, cam_y, info.back_info[2], false )
 	end
-	
+
 	pic_y = pic_y + 11
 	uid, r_clicked = new_input( gui, uid, pic_x, pic_y, pic_z, 144, wid.."path", info.file_info[1] )
 	if( r_clicked ) then
@@ -3493,7 +3512,7 @@ function misc_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			window_table[dimension][wid].extra.file_info[1] = k_buffer
 		end)
 	end
-	
+
 	uid, clicked, r_clicked = new_button( gui, uid, pic_x + 145, pic_y, pic_z, "mods/p2k/files/pics/key_confirm"..( gonna_execute and "_special" or "" )..".png" )
 	uid = new_tooltip( gui, uid, ui_z - 200, "Lua Executer", "LMB to execute. @ RMB to toggle the continuous mode." )
 	if( clicked ) then
@@ -3506,7 +3525,7 @@ function misc_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		new_log( "Continuous mode ["..( window_table[dimension][wid].extra.file_info[2] and "DIS" or "EN" ).."ABLED]" )
 		window_table[dimension][wid].extra.file_info[2] = not( info.file_info[2] )
 	end
-	
+
 	pic_y = pic_y + 11
 	uid, r_clicked = new_input( gui, uid, pic_x, pic_y, pic_z, 70, wid.."globals_name", info.globals_info )
 	if( r_clicked ) then
@@ -3514,7 +3533,7 @@ function misc_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			window_table[dimension][wid].extra.globals_info = k_buffer
 		end)
 	end
-	
+
 	uid, r_clicked = new_input( gui, uid, pic_x + 71, pic_y, pic_z, 84, wid.."globals_value", GlobalsGetValue( info.globals_info, "_" ))
 	if( r_clicked ) then
 		if( GlobalsGetValue( info.globals_info, "{<=@=>}" ) ~= "{<=@=>}" ) then
@@ -3526,36 +3545,36 @@ function misc_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		end
 		keyboard_info[dimension] = { "", "<>", "" }
 	end
-	
+
 	if( gonna_update ) then
 		GameSetPostFxParameter( info.uniform_info[1], info.uniform_info[2][1], info.uniform_info[2][2], info.uniform_info[2][3], info.uniform_info[2][4] )
 	end
 	if( gonna_execute ) then
 		dofile( info.file_info[1] )
 	end
-	
+
 	return uid
 end
 
 function ext_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
 	local t_x, t_y = pic_x, pic_y
-	
+
 	local page = window_table[dimension][wid].extra.page
 	local ext_value = window_table[dimension][wid].extra.ext_value
-	
+
 	if( #extensions > 0 ) then
 		t_x = t_x + 2
 		for i = ( 9*page - 8 ), 9*page do
 			if( i > #extensions ) then
 				break
 			end
-			
+
 			t_y = t_y + 11
 			uid, window_table[dimension][wid].extra.ext_value[extensions[i].id] = extensions[i].custom_line( gui, uid, t_x, t_y, pic_z, wid, ext_value[extensions[i].id] )
 		end
 	end
-	
+
 	pic_x = pic_x + 136
 	pic_y = pic_y + 88
 	uid, page = new_pager( gui, uid, pic_x, pic_y, pic_z, page, math.ceil( #extensions/9 ))
@@ -3568,16 +3587,16 @@ end
 
 function help_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local pic, clicked, r_clicked = 0, 0, 0
-	
+
 	pic_x = pic_x + 2
 	pic_y = pic_y + 11
 	new_text( gui, pic_x, pic_y, pic_z, liner( gui, help_tips[current_tip], 79, 54, 4 ), 2 )
-	
+
 	uid, clicked = new_button( gui, uid, pic_x, pic_y, pic_z - 0.01, "mods/p2k/files/pics/hitbox_help.png" )
 	uid = new_tooltip( gui, uid, ui_z - 400, "LMB me", nil )
 	if( clicked ) then
 		play_sound( "button_special" )
-		
+
 		table.remove( help_tips, current_tip )
 		if( #help_tips > 0 ) then
 			SetRandomSeed( GameGetFrameNum(), m_x + cam_y + #help_tips )
@@ -3587,6 +3606,6 @@ function help_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			help_tips = nil
 		end
 	end
-	
+
 	return uid
 end
