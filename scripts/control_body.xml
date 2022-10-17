@@ -1,0 +1,16 @@
+<Entity serialize="0" name="ctrl_body">
+	<ControlsComponent 
+		_enabled="1" 
+		enabled="1" 
+		gamepad_fire_on_thumbstick_extend="0" 
+		gamepad_fire_on_thumbstick_extend_threshold="0.9" 
+		gamepad_indirect_aiming_enabled="0" 
+		polymorph_hax="0" 
+		polymorph_next_attack_frame="0"
+	></ControlsComponent>
+	
+	<LuaComponent
+		script_source_file="mods/p2k/files/scripts/camera_follower.lua"
+		execute_every_n_frame="1"
+	></LuaComponent>
+</Entity>
