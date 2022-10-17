@@ -1,0 +1,63 @@
+{d3d376b6-af21-4ae3-917c-3e8fb781b724} bank:/Master Bank
+{4bce5662-de5a-06a1-1735-b4714672b1bc} bank:/Master Bank.strings
+{a1b2da2f-9380-4d6c-96be-e47fbeab8c9d} bank:/p2k
+{fd1ec6a6-24b7-4a2e-9988-9733b99dc81e} bus:/
+{ab2beddd-fa07-445b-a933-d5cca76adb6e} bus:/UNASSIGNED 2
+{1a5d4dc3-8fc9-4261-a499-f3f6b0202e17} bus:/UNASSIGNED 3
+{0b728e09-75ca-402a-994c-60d2966e6400} bus:/UNASSIGNED 4
+{c77e6e4c-f45c-48ef-911b-7981915e0fd8} bus:/ambience+reverb
+{f34de4a2-1c20-4c14-99a0-eeb17d2f30a1} bus:/ambient
+{2cbf3aea-7bb4-4ea3-a5d4-bf22bf26f0d0} bus:/distant_reverb
+{af5b14c7-ccc0-43a9-aa70-65cd8f5344a4} bus:/game_sfx
+{8f8e9fd3-8a5c-4873-8776-2d3f3be234a5} bus:/lowpass
+{4686115c-5062-400a-b903-d03d5c45527e} bus:/music
+{5499ef15-f83e-4e92-9144-d53eab549f87} bus:/music_intro_etc
+{9e5f6674-ecca-4cb3-9e39-050604be24e9} bus:/music_reverb
+{8340afee-1bfb-481c-8b65-a1721703356c} bus:/reverb
+{40bdfd79-5dfd-4303-8a71-0792c637c380} bus:/ui
+{e587b0ad-640d-4add-8d88-4a1ef8d21872} event:/bootup
+{e628e8dd-1dd4-4203-ad10-6747a521f492} event:/button_generic
+{8c078475-4d39-4c5b-b77d-c491ae44fea7} event:/button_special
+{ef33810d-8820-408c-80c7-34287088b25f} event:/capture
+{a87c0832-5104-45a8-86f7-34d817f920bb} event:/clear_all
+{c87d51c1-ae6e-4c2a-90be-936ba04cdffc} event:/close_window
+{b7808476-4f09-4a67-9f2a-d46e9c2ab049} event:/confirm
+{911687d2-be5d-4190-85b0-b113d6bc9211} event:/delete
+{3546f25a-342b-438c-8ec1-722709a5550f} event:/error
+{b5b3846b-a7b7-4674-bf2d-4f8d5b40ec7c} event:/keys/key_1_generic
+{303fb5ab-2580-44d0-b64f-37e8c0f068a3} event:/keys/key_1_special
+{b9a44c41-9bc2-4e9c-9670-7d1ee630435d} event:/keys/key_2_generic
+{4fb4ff2e-6e25-41cd-8b9b-27c896edae57} event:/keys/key_2_special
+{018f9d67-e02e-4b2a-91bd-cb6b00bb5ecc} event:/keys/key_3_generic
+{20b4ed09-fe2e-4de9-81d9-36496e3665f8} event:/keys/key_3_special
+{ffe5a865-8462-44a3-80a1-e5d841e06fcf} event:/keys/key_4_generic
+{664edcd7-3ec7-4ae0-acf4-4fd10e133806} event:/keys/key_4_special
+{21368f4c-8288-4bb7-aefd-2cedcacbec32} event:/keys/key_5_generic
+{33b74d9e-678a-4e70-a87e-ccfc75f914a8} event:/keys/key_5_special
+{70a51836-bd8b-4b92-81b7-25b2e3cf40f1} event:/keys/key_6_generic
+{036a7fb9-d11a-4a16-9487-47467ccce247} event:/keys/key_6_special
+{8e203102-88ad-4493-81b1-4276793e7d3b} event:/keys/key_7_generic
+{906f6767-d2c7-4630-a856-9510907856de} event:/keys/key_7_special
+{cdfa9eb2-1c0d-420a-a468-de20cb19e644} event:/keys/key_8_generic
+{0b80e912-3f42-4b1b-9725-ec44c2787c5f} event:/keys/key_8_special
+{9add2a25-1df2-4480-8055-81f9743b21dc} event:/minimize
+{43666076-4b36-41f5-bb09-6336f653ae42} event:/open_main
+{a569e86d-dd5c-41d4-9cf0-845be5ad6ac5} event:/open_window
+{669b0d65-b69f-4bba-8307-f5760af68710} event:/s4s
+{de47a9c2-07f6-4741-a16a-61110236a023} event:/select
+{8a6f4ac9-9eba-48a4-bcf1-5700af9a927b} event:/switch_dimension
+{4301a5b9-06ef-4cba-adeb-e148af954b08} event:/switch_page
+{9632fc79-1f0d-4daf-ae58-54fe97b57cd6} event:/uncapture
+{2bed8e08-00a0-46ca-913b-767eb361643e} event:/unminimize
+{da290cac-e139-4b99-b883-ce1fc690a283} parameter:/Distance
+{2f99f806-4b51-4b0a-a879-566644591f29} parameter:/Migration Name Conflict (3)/lowpass
+{ddf75d16-bdbe-4460-908b-0a29bd483835} parameter:/lowpass
+{dadeda7a-c13b-484b-929e-d3c513e7173b} snapshot:/cave
+{bc5e80f9-a380-47c9-8799-3e02eea94feb} snapshot:/drugged
+{310cecea-3674-4ea8-a6ac-2a8facd05638} snapshot:/hills
+{2aa42396-4f12-4e40-9319-c51683cc06d1} snapshot:/music_duck
+{53a7180c-9635-4a37-a2b8-fb8001ac66ff} snapshot:/music_reverb
+{fcb63c0a-331d-44e6-bf64-cfa8c5b6e6e7} snapshot:/snowcave
+{8c3abc6b-141a-42fe-9d0f-eefcf03cd52f} snapshot:/teleport_nearby
+{c9b0b78b-9869-4058-91fb-73188f7b9103} snapshot:/underwater
+{a0219622-35b0-4a2d-8de4-650884606931} snapshot:/vault
