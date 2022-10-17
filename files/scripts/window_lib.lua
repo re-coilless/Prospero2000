@@ -949,11 +949,12 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local mode = ModSettingGetNextValue( "p2k.CAMERA_MODE" )
 	local modes = {
 		{ "Vanilla", nil, },
-		{ "Follow Entity", "Set up the target from the captured one first with the button on the right.", },
+		{ "Follow Target Entity", "Target the captured entity with the button on the right.", },
+		{ "Follow Captured Entity", "Automatically follow the currently captured entity.", },
 		{ "Free", "Use WASD to move and SHIFT to accelerate. @ Hold RMB for faster movement.", },
 		{ "Locked", "Set up the position with the button on the right. @ RMB to drag the screen. @ Directional buttons on the right can be used for precise positioning." },
 	}
-	uid, clicked, value = new_switcher( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/button_10_A.png", mode, { "V", "E", "F", "L" })
+	uid, clicked, value = new_switcher( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/button_10_A.png", mode, { "V", "T", "C", "F", "L" })
 	uid = new_tooltip( gui, uid, ui_z - 200, modes[mode][1], modes[mode][2], true )
 	if( clicked ) then
 		free_cam( false )
@@ -993,23 +994,23 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	local target_pos = window_table[dimension][wid].extra.target_pos
 	local target_entity = window_table[dimension][wid].extra.target_entity
 	local movers = {{ "left", -1, 0, }, { "up", 0, -1, }, { "down", 0, 1, }, { "right", 1, 0, }}
-	for i = 1,4 do
+	for i = 1,5 do
 		uid, clicked, r_clicked = new_button( gui, uid, pic_x, pic_y, pic_z, "mods/p2k/files/pics/key_direction_"..movers[i][1]..".png" )
 		uid = new_tooltip( gui, uid, ui_z - 200, string.upper( movers[i][1] ), "LMB to move one step. @ RMB to x5.", true )
 		if( clicked ) then
 			play_sound( "button_generic" )
-			if( mode == 4 ) then
+			if( mode == 5 ) then
 				window_table[dimension][wid].extra.target_pos[1] = target_pos[1] + movers[i][2]
 				window_table[dimension][wid].extra.target_pos[2] = target_pos[2] + movers[i][3]
 			else
 				free_cam( false )
-				ModSettingSetNextValue( "p2k.CAMERA_MODE", 4, false )
-				mode = 4
+				ModSettingSetNextValue( "p2k.CAMERA_MODE", 5, false )
+				mode = 5
 				window_table[dimension][wid].extra.target_pos = { cam_x, cam_y, }
 			end
 		end
 		if( r_clicked ) then
-			if( mode == 4 ) then
+			if( mode == 5 ) then
 				play_sound( "button_special" )
 				window_table[dimension][wid].extra.target_pos[1] = target_pos[1] + movers[i][2]*5
 				window_table[dimension][wid].extra.target_pos[2] = target_pos[2] + movers[i][3]*5
@@ -1044,7 +1045,9 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 			if( hooman ~= 0 ) then
 				local shooter_comp = EntityGetFirstComponentIncludingDisabled( hooman, "PlatformShooterPlayerComponent" )
 				local char_x, char_y = EntityGetTransform( hooman )
-				ComponentSetValue2( shooter_comp, "mDesiredCameraPos", char_x, char_y )
+				if( shooter_comp ~= nil ) then
+				    ComponentSetValue2( shooter_comp, "mDesiredCameraPos", char_x, char_y )
+                end
 			end
 		end
 	elseif( mode == 2 ) then
@@ -1063,7 +1066,23 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 		else
 			free_cam( false )
 		end
-	elseif( mode == 3 ) then
+	elseif( mode == 3 ) then    -- Copi: This is blatantly copied from mode 2, only difference is captured vs target. 
+		if( captured_entity ~= nil and EntityGetIsAlive( captured_entity )) then
+			local t_x, t_y = EntityGetTransform( captured_entity )
+			if( hooman ~= 0 ) then
+				local shooter_comp = EntityGetFirstComponentIncludingDisabled( hooman, "PlatformShooterPlayerComponent" )
+				if( shooter_comp ~= nil ) then
+					ComponentSetValue2( shooter_comp, "mSmoothedCameraPosition", t_x, t_y )
+					ComponentSetValue2( shooter_comp, "mDesiredCameraPos", t_x, t_y )
+				end
+			else
+				free_cam( true )
+				GameSetCameraPos( t_x + offsets[1], t_y + offsets[2] )
+			end
+		else
+			free_cam( false )
+		end
+	elseif( mode == 4 ) then
 		free_cam( true )
 
 		if( rmb_down ) then
