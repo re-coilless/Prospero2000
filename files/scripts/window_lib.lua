@@ -1053,11 +1053,14 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	elseif( mode == 2 ) then
 		if( target_entity ~= nil and EntityGetIsAlive( target_entity )) then
 			local t_x, t_y = EntityGetTransform( target_entity )
+            local c_x, c_y = GameGetCameraPos()
+            local smoothing = 15
+            local d_x, d_y = c_x + (t_x - c_x)/smoothing, c_y + (t_y - c_y)/smoothing
 			if( hooman ~= 0 ) then
 				local shooter_comp = EntityGetFirstComponentIncludingDisabled( hooman, "PlatformShooterPlayerComponent" )
 				if( shooter_comp ~= nil ) then
-					ComponentSetValue2( shooter_comp, "mSmoothedCameraPosition", t_x, t_y )
-					ComponentSetValue2( shooter_comp, "mDesiredCameraPos", t_x, t_y )
+					ComponentSetValue2( shooter_comp, "mSmoothedCameraPosition", d_x, d_y )
+					ComponentSetValue2( shooter_comp, "mDesiredCameraPos", d_x, d_y )
 				end
 			else
 				free_cam( true )
@@ -1069,11 +1072,14 @@ function camera_window( gui, uid, pic_x, pic_y, pic_z, wid )
 	elseif( mode == 3 ) then    -- Copi: This is blatantly copied from mode 2, only difference is captured vs target. 
 		if( captured_entity ~= nil and EntityGetIsAlive( captured_entity )) then
 			local t_x, t_y = EntityGetTransform( captured_entity )
+            local c_x, c_y = GameGetCameraPos()
+            local smoothing = 15
+            local d_x, d_y = c_x + (t_x - c_x)/smoothing, c_y + (t_y - c_y)/smoothing
 			if( hooman ~= 0 ) then
 				local shooter_comp = EntityGetFirstComponentIncludingDisabled( hooman, "PlatformShooterPlayerComponent" )
 				if( shooter_comp ~= nil ) then
-					ComponentSetValue2( shooter_comp, "mSmoothedCameraPosition", t_x, t_y )
-					ComponentSetValue2( shooter_comp, "mDesiredCameraPos", t_x, t_y )
+					ComponentSetValue2( shooter_comp, "mSmoothedCameraPosition", d_x, d_y )
+					ComponentSetValue2( shooter_comp, "mDesiredCameraPos", d_x, d_y )
 				end
 			else
 				free_cam( true )
